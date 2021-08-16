@@ -1,0 +1,199 @@
+html
+  box-sizing: border-box
+
+*,
+*::after,
+*::before
+  box-sizing: inherit
+
+a
+  text-decoration: none
+  color: inherit
+  display: inline-block
+
+ul,li
+    margin: 0
+    padding: 0
+    list-style: none  
+
+h1,h2,h3,h4,h5,h6
+    margin: 0
+p
+    margin: 0    
+
+
+
+body
+    min-width: 320px
+    font-family: 'Source Sans Pro', sans-serif
+    font-size: 20px
+    line-height: 25px
+    font-weight: 600
+    color: #3F3F3F
+    background: #E5E5E5
+    
+
+
+.container
+    max-width: 1400px 
+    margin: 0 auto
+    padding: 0 15px
+
+
+
+.goods
+    padding-top: 32px
+    &__content
+        display: flex
+        &-left
+            margin-right: 16px
+    &__title
+        font-size: 28px
+        line-height: 35px
+        color: #3F3F3F
+        margin-bottom: 16px
+    &__info
+        width: 332px
+        min-height: 440px
+        background: #FFFEFB
+        box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.04), 0px 6px 10px rgba(0, 0, 0, 0.02)
+        border-radius: 4px  
+        padding: 24px   
+    &__label
+        font-size: 10px
+        font-weight: 400
+        color: #49485E
+        position: relative
+        &::before
+            content: ''
+            position: absolute
+            background-image: url('../img/circle.png')
+            width: 4px
+            height: 4px
+            top: 0
+        &-name
+            &::before
+                left: 100px
+        &-img
+            &::before
+                left: 141px  
+        &-description
+            &::before
+                content: none         
+        &-price
+            &::before
+                left: 56px                       
+    &__input
+        width: 100% 
+        padding: 10px 105px 11px 16px  
+        background: #FFFEFB
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1)
+        border-radius: 4px
+        border: none
+        padding-top: 4px
+        margin-bottom: 16px
+            
+        &-description
+            padding-bottom: 83px
+    &__input::placeholder
+        font-size: 12px
+        font-weight: 400
+        line-height: 15px
+        color: #B4B4B4
+    &__select
+        display: flex
+        justify-content: flex-end   
+        margin-right: 30px 
+
+.add
+    width: 100%
+    padding: 10px 95px 
+    background: #EEEEEE
+    border: none
+    border-radius: 10px
+    height: 36px
+    font-size: 12px
+    color: #B4B4B4
+
+
+.select
+    background-color: #fff
+    border-radius: 4px
+    outline: none
+    border: none
+    color: #b4b4b4
+    font-size: 12px
+    padding: 10px 16px
+    margin-top: 4px
+    
+
+.items
+    &__inner
+        display: flex
+        flex-wrap: wrap
+        padding-top: 11px
+
+.delete
+    width: 32px
+    height: 32px
+    background-color: #FF8484
+    border-radius: 10px
+    z-index: 22
+    position: absolute
+    top: -10px
+    right: -10px
+    display: flex
+    transition: .3s
+    display: none
+    border: none
+    &:hover
+        background-color: #e42828 
+    &__img
+        width: 56%
+        height: 56%
+        position: absolute
+        top: 6px
+        left: 7px  
+.item:hover .delete
+    display: block           
+
+.item
+    position: relative
+    width: 310px
+    margin-bottom: 16px
+    background-color: #FFFEFB
+    padding-bottom: 24px
+    border-radius: 4px
+    cursor: pointer
+    margin-left: 10px
+    cursor: url('../img/cursor.png'), pointer
+    transition: all .3s
+    &:not(:last-child)
+        margin-right: 15px
+    &:hover
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)    
+
+    &__img
+        object-fit: cover  
+        width: 310px  
+    &__info
+        max-width: 317px
+        padding-left: 16px        
+    &__name
+        font-weight: 600
+        font-size: 20px
+        line-height: 25px
+        color: #3F3F3F
+        padding-top: 16px
+        margin-bottom: 16px
+    &__description
+        font-size: 16px
+        line-height: 20px
+        color: #3F3F3F 
+        margin-bottom: 32px
+    &__price
+        font-size: 24px
+        line-height: 30px
+        color: #3F3F3F       
+        
+     
